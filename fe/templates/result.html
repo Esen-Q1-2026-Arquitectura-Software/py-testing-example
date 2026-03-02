@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Result — Calculator{% endblock %}
+
+{% block content %}
+<h1>Result</h1>
+<p class="subtitle">{{ data.operation | capitalize }}</p>
+
+<div style="
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+    text-align: center;
+">
+    <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">
+        {% if data.operation == 'addition' %}
+            {{ data.a }} + {{ data.b }}
+        {% else %}
+            {{ data.a }} × {{ data.b }}
+        {% endif %}
+    </div>
+    <div style="font-size: 3rem; font-weight: 800; color: {% if data.operation == 'addition' %}#818cf8{% else %}#34d399{% endif %};">
+        {{ data.result }}
+    </div>
+</div>
+
+<a href="/">← Back to calculator</a>
+{% endblock %}

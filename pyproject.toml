@@ -1,0 +1,13 @@
+[project]
+name = "py-testing-example"
+version = "0.1.0"
+description = "Simple calculator app — Flask frontend + FastAPI backend"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "flask>=3.1.0",
+    "requests>=2.32.0",
+    "pydantic>=2.0.0",
+]
