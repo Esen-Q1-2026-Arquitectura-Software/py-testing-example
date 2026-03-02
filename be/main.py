@@ -31,10 +31,13 @@ def health_check():
 
 @app.post("/add", response_model=OperationResult)
 def add(payload: OperationRequest):
+    num1 = payload.a
+    num2 = payload.b
+    result = num1 + num2
     return OperationResult(
-        a=payload.a,
-        b=payload.b,
-        result=payload.a + payload.b,
+        a=num1,
+        b=num2,
+        result=result,
         operation="addition",
     )
 
